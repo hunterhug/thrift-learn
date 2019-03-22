@@ -1,0 +1,12 @@
+{
+	"ImportPath": "thrift_example",
+	"GoVersion": "go1.12",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/apache/thrift/lib/go/thrift",
+			"Comment": "v0.12.0-271-g73a0272",
+			"Rev": "73a0272d66b07bb6d64fc8fafd8faca9df8d0e32"
+		}
+	]
+}
