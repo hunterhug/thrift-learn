@@ -16,6 +16,8 @@ go build client.go
 ./client
 ```
 
+`$GOPATH` 为环境变量，请替换为你的本地路径。
+
 ##  具体使用，详细介绍
 
 gRPC是Google研究的RPC传输方案，thrift则是facebook, 大家都通过IDL（Interface Definition Language）接口定义语言来规范输入输出。
@@ -36,7 +38,9 @@ sudo make install
 sudo ldconfig
 ```
 
-### 进入开发
+Windows系统请直接安装二进制。
+
+### 建立 thrift 文件
 
 新建 `timeRPC.thrift`:
 
@@ -47,6 +51,10 @@ service timeServe {
 ```
 
 ### C++ 服务端
+
+您可以忽略 `C++` 部分，直接跳到 `Golang` 部分。
+
+执行：
 
 ```
 thrift --gen cpp timeRPC.thrift
@@ -219,7 +227,9 @@ go env
 GOPATH="/opt/gocode"
 ```
 
-准备必要庫：
+其中 `$GOPATH` 为 `/opt/gocode` 。
+
+准备必要库：
 
 ```
 mkdir -p $GOPATH/src/github.com/apache
@@ -227,7 +237,7 @@ cd $GOPATH/src/github.com/apache
 git clone https://github.com/apache/thrift.git
 ```
 
-其中`/opt/app/thrift-0.12.0`为之前下载的`thrift`工具。
+执行：
 
 ```
 thrift --gen go timeRPC.thrift
